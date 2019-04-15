@@ -1,0 +1,91 @@
+:root {
+  --off-white: #f4f4f4;
+  --text-color: #383631;
+  --color-1: #71a5ed;
+  --color-2: #fc6471;
+  --default-font-size: 1.6rem;
+}
+
+/* Building site for desktop first 1200px - 1800px
+
+/* Remember: the 'rem' unit is always in relation to the root font size. The global/root font size is set in the html element. Font-size: 10px;  Now, 1rem is 10px , BUT users can not change the font size in their browser if they need to. */
+html {
+  /* This is the % of the browser default which is usually 16px 10px/16px = 62.5. For screens 1200 - 1800px, 1rem = 10px */
+  font-size: 62.5%;
+
+  /* @include respond(tab-land) {
+    // if width <= 1200px, then...1rem = 9px, 9/16 = 56.25%
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    // if width <= 900px, then...1rem = 8px, 8/16 = 50%
+    font-size: 50%;
+  }
+
+  // RESPONSIVE: phone @include not necessary in this case
+  // tab-port is 2nd in order b/c if device is say, 500, both queries are true but port is the last one in the order so it is used. HOWEVER, may need a smaller font-size/design-size for phones?
+
+  @include respond(big-desktop) {
+    // if width >= 1800px, then...1rem = 12px, 12/16 = 75%
+    font-size: 75%;
+  } */
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Avenir Next", Avenir, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.Home__top {
+  background-color: var(--off-white);
+  height: 75vh;
+}
+
+.Home__title {
+  font-size: 17.5rem;
+  line-height: 1;
+  font-weight: 900;
+
+  margin-left: 50%;
+}
+
+.Home__title-period {
+  color: var(--color-1);
+  font-size: 17.5rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.Home__who {
+  font-size: 2.75rem;
+
+  margin-left: 50%;
+  margin-bottom: 1.8rem;
+}
+
+.Home__who-mimas {
+  color: var(--color-2);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.Home__who-link {
+  text-decoration: none;
+  color: var(--color-1);
+}
+
+.Home__see {
+  font-size: 2.25rem;
+
+  margin-top: 25%;
+  margin-left: 15%;
+}
+
+.Home__see-down {
+  color: var(--color-1);
+  font-size: 3rem;
+  font-weight: 900;
+}
