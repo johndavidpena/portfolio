@@ -1,0 +1,13 @@
+/* Hidden text */
+.Info {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.Info__text {
+  max-width: 66ch;
+  line-height: 1.7;
+  margin-top: var(--spacing-4);
+}

@@ -1,21 +1,27 @@
 import React from 'react'
-import './Work.css'
+import { useSpring, animated } from 'react-spring'
+import './WorkCards.css'
 
-const Picker = () => (
-  <div className="Work">
-    <div className="Work__site">
-      <h2 className="Work__title">mimas music</h2>
-      <p className="Work__description">Interactive Music Education</p>
-    </div>
-    <div className="Work__site">
-      <h2 className="Work__title">cafe racer</h2>
-      <p className="Work__description">Modern commerce</p>
-    </div>
-    <div className="Work__site">
-      <h2 className="Work__title">feedin' time</h2>
-      <p className="Work__description">Mobile web app</p>
-    </div>
-  </div>
-)
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
-export default Picker;
+const Work = (props) => {
+  const [values, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
+
+  return (
+    <section id="cardWrapper">
+      <animated.div
+        className="card"
+        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+        onMouseLeave={() => set({ xys: [0, 0, 1] })}
+        style={{ transform: values.xys.interpolate(trans) }}
+      >
+        <h2 className="Work__title">{props.title}</h2>
+        <p className="Work__subTitle">{props.sub}</p>
+        <p className="Work__description">{props.description}</p>
+      </animated.div>
+    </section>
+  );
+}
+
+export default Work;

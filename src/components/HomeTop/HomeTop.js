@@ -1,55 +1,39 @@
 import React, { useState } from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
+import Info from '../Info/Info';
 import './HomeTop.css';
 
-const HomeTop = (props) => {
-  const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
+const HomeTop = () => {
+  // Adds a fade in effect on load
+  // const fade = useSpring({ from: { opacity: 0 }, opacity: 1 });
 
-  const [toggleState, setToggleState] = useState('hide');
+  const [isInfoShowing, setInfoShowing] = useState(false);
 
-  function toggle() {
-    setToggleState(toggleState === 'hide' ? 'show' : 'hide');
-  }
+  const infoAnimation = useSpring({
+    // transform: isInfoShowing ? `translate3d(0,0,0)` : `translate3d(100%,0,0)`
+    transform: isInfoShowing ? `scale(1)` : `scale(0)`,
+    display: isInfoShowing ? `block` : 'none',
+  });
 
-  if (toggleState === 'show') {
     return (
       <section className="Home__top">
         <div className="Home__container">
           <h2 className="Home__title">john<span aria-hidden="true" className="Home__title-period">.</span></h2>
-          <h1 className="Home__desc">Hi, my name is John Pena and I make websites.<br />As <span className="Home__who-mimas">Mimas the moon</span>, I write songs.<br />I lovingly operate <a className="Home__link" href="www.mimasmusic.com" className="Home__link" target="_blank">mimasmusic</a>.
+          <h1 className="Home__desc">Hi, my name is John and I make websites.<br />As <span className="Home__who-mimas">Mimas the moon</span>, I write songs.<br />I lovingly operate <span className="Home__mimas">mimasmusic</span>.
           </h1>
 
-          {/* TODO: Can use react-spring to make this animation opening and closing? */}
-          <animated.div className="Home__read" style={fade}>
-            <p className="Home__info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam et facilis ex quos! In qui quidem dolores provident illum doloremque, facere quibusdam, ullam nam voluptatum repellendus maiores eum, assumenda sint?</p>
-            <p className="Home__info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam et facilis ex quos! In qui quidem dolores provident illum doloremque, facere quibusdam, ullam nam voluptatum repellendus maiores eum, assumenda sint?</p>
-          </animated.div>
+          <Info style={infoAnimation}/>
 
           <div className="Home__instructions">
             <p className="Home__see">
-              <button onClick={toggle}>Read more</button> or check out some of my work below <span className="Home__see-down">&#8623;</span>
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  } else {
-    return (
-      <section className="Home__top">
-        <div className="Home__container">
-          <h2 className="Home__title">john<span aria-hidden="true" className="Home__title-period">.</span></h2>
-          <h1 className="Home__desc">Hi, my name is John Pena and I make websites.<br />As <span className="Home__who-mimas">Mimas the moon</span>, I write songs.<br />I lovingly operate <a className="Home__link" href="www.mimasmusic.com" className="Home__link" target="_blank">mimasmusic</a>.
-          </h1>
-
-          <div className="Home__instructions">
-            <p className="Home__see">
-              <button onClick={toggle}>Read more</button> or check out some of my work below <span className="Home__see-down">&#8623;</span>
+              <button
+                onClick={() => setInfoShowing(!isInfoShowing)}
+              >Read more</button> or check out some of my work below <span className="Home__see-down">&#8623;</span>
             </p>
           </div>
         </div>
       </section>
     );
   }
-}
 
 export default HomeTop;

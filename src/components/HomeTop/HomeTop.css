@@ -107,22 +107,8 @@
   font-weight: 500;
 }
 
-.Home__link {
-  text-decoration: none;
+.Home__mimas {
   color: var(--color-blue);
-}
-
-/* Hidden text */
-.Home__read {
-  position: relative;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.Home__info {
-  max-width: 66ch;
-  line-height: 1.7;
-  margin-top: var(--spacing-4);
 }
 
 /* Instructions */
@@ -160,6 +146,7 @@
   -webkit-appearance: button;
   text-transform: none;
   overflow: visible;
+  outline: none;
 }
 
 .Home__see button:hover {
