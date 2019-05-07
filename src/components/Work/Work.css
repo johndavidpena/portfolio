@@ -1,0 +1,30 @@
+.Work {
+  /* margin-top: 5rem; */
+}
+
+.Work__site {
+  width: 100vw;
+
+  padding: 4rem 2rem;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.Work__site:hover {
+  background-color: var(--off-white);
+}
+
+.Work__title {
+  font-size: 10rem;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.Work__description {
+  display: inline;
+  padding: 0 1rem;
+  font-size: 2.75rem;
+  background-color: var(--color-red);
+}

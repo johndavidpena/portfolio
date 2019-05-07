@@ -1,0 +1,164 @@
+.Picker {
+  padding-top: var(--spacing-6);
+  padding-bottom: var(--spacing-6);
+}
+
+.Picker__hidden {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(1px);
+  clip-path: inset(1px);
+  height: 1px;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.Picker__fieldset {
+  line-height: 1;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 0;
+  border: 0;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+  font-size: var(--font-size-3);
+  margin-bottom: var(--spacing-4);
+  max-width: var(--sizing-8);
+}
+@media only screen and (min-width: 48em) {
+  .Picker__fieldset {
+    padding-left: var(--spacing-4);
+    padding-right: var(--spacing-4);
+  }
+}
+@media only screen and (min-width: 62em) {
+  .Picker__fieldset {
+    padding-left: var(--spacing-5);
+    padding-right: var(--spacing-5);
+  }
+}
+
+.Picker__legend {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(1px);
+  clip-path: inset(1px);
+  height: 1px;
+  width: 1px;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: inherit;
+  max-width: 100%;
+  padding: 0;
+}
+
+.Picker__websites {
+  margin-right: var(--spacing-4);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.Picker__music {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.Picker__websites input:checked ~ .Picker__websites-checkbox,
+.Picker__music input:checked ~ .Picker__music-checkbox {
+  opacity: 1;
+}
+
+.Picker__websites input:checked ~ .Picker__websites-checkbox:after,
+.Picker__music input:checked ~ .Picker__music-checkbox:after {
+  display: block;
+}
+
+.Picker__websites .Picker__websites-checkbox:after,
+.Picker__music .Picker__music-checkbox:after {
+  left: 4px;
+  top: -1px;
+  width: 9px;
+  height: 16px;
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.Picker__websites input:checked ~ .Picker__websites-checkbox-label,
+.Picker__music input:checked ~ .Picker__music-checkbox-label {
+  opacity: 1;
+}
+
+.Picker__websites-input,
+.Picker__music-input {
+  margin-bottom: -3px;
+  width: 1.4rem;
+  height: 1.4rem;
+
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+
+  border-width: var(--border-width-2);
+  border-color: var(--color-red);
+  border-style: solid;
+  box-sizing: border-box;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* outline: 0; */
+  line-height: normal;
+  font-family: inherit;
+  overflow: visible;
+  font-size: 100%;
+  margin: 0;
+}
+
+.Picker__websites-checkbox,
+.Picker__music-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin-bottom: -3px;
+  width: 1.4rem;
+  height: 1.4rem;
+
+  opacity: 0.5;
+  cursor: pointer;
+  border-width: var(--border-width-2);
+  border-color: var(--color-red);
+  border-style: solid;
+}
+
+.Picker__websites-checkbox:after,
+.Picker__music-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.Picker__websites-checkbox-label,
+.Picker__music-checkbox-label {
+  opacity: 0.5;
+  color: var(--normal-text);
+}
