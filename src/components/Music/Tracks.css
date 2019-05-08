@@ -1,0 +1,60 @@
+.Tracks-all {
+  position: relative;
+  width: 320px;
+  height: 240px;
+}
+
+/* TODO: Add MQ's */
+
+.Tracks-box {
+  position: absolute;
+  width: 320px;
+  height: 90px;
+  overflow: visible;
+  pointer-events: auto;
+  transform-origin: 50% 50% 0px;
+  border-radius: 5px;
+  background: lightblue;
+  /* padding-left: 32px; */
+  /* line-height: 90px; */
+  /* text-transform: uppercase; */
+
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+}
+
+/* TODO: Add MQ's */
+
+.Tracks-info {
+  justify-self: center;
+}
+
+.Tracks-title {
+  color: var(--dark-text);
+  font-size: var(--font-size-5);
+  letter-spacing: 1px;
+}
+
+.Tracks-artist {
+  color: var(--dark-text);
+  font-size: var(--font-size-7);
+  letter-spacing: 0.5px;
+}
+
+.Tracks-animation {
+  justify-self: center;
+}
+
+.Tracks-all > div:nth-child(1) {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+.Tracks-all > div:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.Tracks-all > div:nth-child(3) {
+  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+}
+.Tracks-all > div:nth-child(4) {
+  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+}

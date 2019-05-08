@@ -1,8 +1,6 @@
 import React, { Component } from "react"
 import '../components/index.css'
-
 import Layout from "../components/layout/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
 import HomeTop from '../components/HomeTop/HomeTop'
 import Picker from '../components/Picker/Picker'
@@ -41,7 +39,6 @@ class IndexPage extends Component {
           </React.Fragment>}
 
         {this.state.musicShowing && <Music />}
-
       </Layout>
     );
   }
