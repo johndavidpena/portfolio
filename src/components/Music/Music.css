@@ -5,8 +5,10 @@
   overflow: hidden;
   user-select: none;
   font-family: 'Avenir Next', sans-serif;
+
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   background: var(--normal-text);
   cursor: url('https://uploads.codesandbox.io/uploads/user/b3e56831-8b98-4fee-b941-0e27f39883ab/Ad1_-cursor.png') 39 39,

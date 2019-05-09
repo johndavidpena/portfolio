@@ -30,13 +30,14 @@ const Tracks = ({ items }) => {
     currentOrder = newOrder;
   });
 
+  // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
   const play = () => {
     let index = currentOrder[0];
     console.log('play called, track playing is', items[index].trackName);
 
     const Track = new Howl({
       src: [items[index].src],
-      volume: 0.8,
+      volume: 0.5,
       // onend: function () {
       //   TODO: Check currentOrder and play currentOrder[1]
       // }
@@ -46,10 +47,8 @@ const Tracks = ({ items }) => {
   }
 
   return (
-    <section>
-      <Controls
-        play={play}
-      />
+    <React.Fragment>
+      <Controls play={play} />
       <div className="Tracks-all" style={{ height: items.length * 100 }}>
         {springs.map(({ zIndex, shadow, y, scale }, i) => (
           <animated.div
@@ -74,7 +73,7 @@ const Tracks = ({ items }) => {
           </animated.div>
         ))}
       </div>
-    </section>
+    </React.Fragment>
   )
 }
 

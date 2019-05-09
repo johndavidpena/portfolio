@@ -1,7 +1,14 @@
 :root {
   --off-white: #f4f4f4;
   --color-blue: #71a5ed;
+  --color-blue-light: #a4d8ff;
   --color-red: #fc6471;
+  --color-red-light: #ff97a4;
+  --color-lavender: #E9D2F4;
+  --color-lavender-light: #ffecff;
+  --color-purple: #4E598C;
+  --color-purple-light: #9ba6d9;
+
   --default-font-size: 1.6rem;
 
   --dark-text: hsl(0, 0%, 13%);

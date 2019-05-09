@@ -14,7 +14,7 @@
   pointer-events: auto;
   transform-origin: 50% 50% 0px;
   border-radius: 5px;
-  background: lightblue;
+  /* background: lightblue; */
   /* padding-left: 32px; */
   /* line-height: 90px; */
   /* text-transform: uppercase; */
@@ -47,14 +47,18 @@
 }
 
 .Tracks-all > div:nth-child(1) {
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  /* background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-blue-light) 100%); */
+  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-red-light) 100%);
 }
 .Tracks-all > div:nth-child(2) {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  /* background: linear-gradient(135deg, var(--color-lavender) 0%, var(--color-lavender-light) 100%); */
+  background: linear-gradient(135deg, var(--color-purple-light) 0%, var(--color-lavender) 100%);
 }
 .Tracks-all > div:nth-child(3) {
-  background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%);
+  /* background: linear-gradient(135deg, var(--color-red) 0%, var(--color-red-light) 100%); */
+  background: linear-gradient(135deg, var(--color-red) 0%, var(--color-lavender-light) 100%);
 }
 .Tracks-all > div:nth-child(4) {
-  background: linear-gradient(135deg, #c3cfe2 0%, #c3cfe2 100%);
+  /* background: linear-gradient(135deg, var(--color-purple) 0%, var(--color-purple-light) 100%); */
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-purple) 100%);
 }
