@@ -1,40 +1,93 @@
 .Music {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--color-purple);
+  z-index: 10;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  align-items: center;
 }
 
-.TrackCard-box {
-  margin-bottom: 10ch;
-  width: 25ch;
-  height: 25ch;
-}
-
-.Card {
+.MusicBack {
+  color: var(--off-white);
   position: absolute;
-  width: 25ch;
-  height: 25ch;
+  top: 1.5rem;
+  left: 0.75rem;
+  cursor: pointer;
+}
+
+.TrackWrapper {
+  width: var(--sizing-5);
+  height: var(--sizing-5);
+}
+
+.Track {
+  position: absolute;
+  width: var(--sizing-5);
+  height: var(--sizing-5);
   cursor: pointer;
   will-change: transform, opacity;
-}
-
-.front,
-.back {
   background-size: cover;
 }
 
-.back {
-  background-color: var(--color-purple);
-}
-/* .front {
-  background-color: var(--color-purple-light);
-} */
-
-.CardTrackName {
+.FrontName {
   color: var(--off-white);
   font-family: inherit;
   position: absolute;
   top: 1.5rem;
   left: 0.75rem;
   z-index: 1;
+}
+
+.FrontImage {
+  width: var(--sizing-5);
+}
+
+.BackTop {
+  width: var(--sizing-5);
+  height: var(--sizing-4);
+  display: flex;
+  background: var(--color-black);
+}
+
+.BackImage {
+  width: var(--sizing-4);
+  padding: var(--spacing-2);
+  border-radius: var(--border-radius-3);
+}
+
+.BackName {
+  color: var(--off-white);
+  font-size: var(--font-size-5);
+}
+
+.BackArtist {
+  color: var(--off-white);
+  font-size: var(--font-size-6);
+}
+
+.BackBottom {
+  width: var(--sizing-5);
+  height: var(--sizing-4);
+  background-color: var(--color-black);
+}
+
+.Controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 70%;
+}
+
+.ControlIcons {
+  /* cursor: pointer; */
+}
+
+.volume {
+  text-align: center;
 }

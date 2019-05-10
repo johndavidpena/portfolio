@@ -13,7 +13,7 @@ const Picker = props => (
           className="Picker__websites-input"
           value="websites"
           id="websites"
-          onChange={props.toggle}
+          onChange={props.toggleSites}
           defaultChecked />
         <span className="Picker__websites-checkbox"></span>
         <span className="Picker__websites-checkbox-label">&nbsp;websites</span>
@@ -25,7 +25,7 @@ const Picker = props => (
           className="Picker__music-input"
           value="music"
           id="music"
-          onChange={props.toggle}
+          onChange={props.toggleMusic}
         />
         <span className="Picker__music-checkbox"></span>
         <span className="Picker__music-checkbox-label">&nbsp;music</span>
