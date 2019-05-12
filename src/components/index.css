@@ -116,3 +116,65 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.Picker {
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-5);
+  padding-left: var(--spacing-3);
+}
+@media only screen and (min-width: 48em) {
+  .Picker {
+    padding-bottom: var(--spacing-6);
+    padding-left: var(--spacing-4);
+  }
+}
+@media only screen and (min-width: 62em) {
+  .Picker {
+    padding-left: var(--spacing-5);
+  }
+}
+
+.Picker__text {
+  display: inline-block;
+  padding-top: var(--spacing-1);
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-4);
+  line-height: 1.5;
+}
+@media only screen and (min-width: 36em) {
+  .Picker__text {
+    padding-top: var(--spacing-2);
+  }
+}
+
+.Picker__text:nth-child(1) {
+  padding-right: var(--spacing-3);
+}
+
+.Picker__text button {
+  line-height: 1.3;
+  font-size: var(--font-size-4);
+  transition: all 0.2s ease-in-out;
+  box-shadow: inset 0 -0.2em 0 0 var(--color-red);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  outline: none;
+}
+
+.Picker__text button:hover {
+  box-shadow: inset 0 -2em 0 0 var(--color-red);
+}
+
+.Picker__right {
+  color: var(--color-blue);
+  /* font-size: 3rem; */
+  font-weight: 900;
+}

@@ -2,12 +2,13 @@ import React from 'react'
 import Icon from '../Icons/Icons'
 import './Music.css'
 
-const Music = (props) => (
+const Music = props => (
   <section className="MusicWrapper">
     <div id={props.id} className="Music">
       <h2 className="Music__title">{props.title}</h2>
       <div className="Music__controls">
         <p className="Music__artist">{props.artist}</p>
+        <p className="Music__status">{props.status}</p>
         <div className="IconWrapper">
           <Icon
             clickHandler={props.stop}

@@ -3,14 +3,19 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 5rem;
   padding-bottom: 5rem;
+}
+@media only screen and (min-width: 36em) {
+  /*576px or more*/
+  .MusicWrapper {
+    padding-top: var(--spacing-5);
+  }
 }
 
 .Music {
   position: relative;
-  width: var(--sizing-5);
-  height: var(--sizing-5);
+  width: 19rem;
+  height: 19rem;
   background: hsl(0, 0%, 90%);
   border-radius: 5px;
   box-shadow: var(--box-shadow);
@@ -22,6 +27,13 @@
   .Music {
     width: 24rem;
     height: 24rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  /*768px or more*/
+  .Music {
+    width: 28rem;
+    height: 28rem;
   }
 }
 @media only screen and (min-width: 56.25em) {
@@ -93,9 +105,14 @@
   }
 }
 
+.Music__status {
+  color: var(--off-white);
+  font-size: var(--font-size-7);
+}
+
 .Music__controls {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.25fr 1fr;
   align-items: center;
   width: 100%;
   position: absolute;
@@ -112,4 +129,8 @@
 
 .ControlIcons {
   cursor: pointer;
+}
+
+.ControlIcons:active {
+  top: -1;
 }

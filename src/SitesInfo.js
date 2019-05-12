@@ -1,34 +1,34 @@
 import CafeImage from './images/cafeImage.jpg'
-import MimasImage from './images/moon.jpg'
-import FeedinImage from './images/moon.jpg'
+import MimasImage from './images/mimasImage.jpg'
+import FeedinImage from './images/feedinImage.jpg'
 
 const SitesInfo = [
   {
+    id: 1,
     title: 'Cafe Racer',
     sub: 'Modern Commerce',
-    description: '',
-    tools: 'HTML, CSS, and javascript',
+    tools: 'HTML, CSS, javascript',
     image: CafeImage,
     alt: 'The cafe racer homepage',
     link: 'https://nifty-ardinghelli-40a454.netlify.com/'
   },
   {
+    id: 2,
     title: 'Mimas Music',
     sub: 'Interactive Music Education',
-    description: '',
-    tools: 'Node, Express, and MongoDB',
+    tools: 'Node, Express, MongoDB',
     image: MimasImage,
     alt: 'The Mimas Music homepage',
-    link: 'mimasmusic.com'
+    link: 'http://mimasmusic.com'
   },
   {
+    id: 3,
     title: "Feedin' Time",
     sub: 'Mobile Web App',
-    description: '',
-    tools: 'React, Meteor, and MongoDB',
+    tools: 'React, Meteor, MongoDB',
     image: FeedinImage,
     alt: 'The Feedin Time homepage',
-    link: 'dharmanure.com'
+    link: 'http://dharmanure.com'
   }
 ];
 
