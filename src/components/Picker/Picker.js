@@ -2,6 +2,7 @@ import React from 'react'
 import './Picker.css'
 
 const Picker = props => (
+
   <section className="Picker">
     <h2 className="Picker__hidden">Websites and Music</h2>
     <fieldset className="Picker__fieldset">
@@ -13,7 +14,7 @@ const Picker = props => (
           className="Picker__websites-input"
           value="websites"
           id="websites"
-          onChange={props.toggleSites}
+          onClick={props.toggle}
           defaultChecked />
         <span className="Picker__websites-checkbox"></span>
         <span className="Picker__websites-checkbox-label">&nbsp;websites</span>
@@ -25,8 +26,7 @@ const Picker = props => (
           className="Picker__music-input"
           value="music"
           id="music"
-          onChange={props.toggleMusic}
-        />
+          onClick={props.toggle} />
         <span className="Picker__music-checkbox"></span>
         <span className="Picker__music-checkbox-label">&nbsp;music</span>
       </label>

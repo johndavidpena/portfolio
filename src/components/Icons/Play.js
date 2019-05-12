@@ -2,12 +2,14 @@ import React from "react";
 
 const SVG = ({
   style = {},
+  clickHandler = null,
   fill = "#000",
   width = "100%",
   className = "",
   viewBox = "0 0 24 24"
 }) => (
     <svg
+      onClick={clickHandler}
       width={width}
       style={style}
       height={width}

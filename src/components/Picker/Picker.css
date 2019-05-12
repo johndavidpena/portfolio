@@ -1,6 +1,12 @@
 .Picker {
   padding-top: var(--spacing-5);
-  padding-bottom: var(--spacing-6);
+  padding-bottom: var(--spacing-5);
+}
+
+@media only screen and (min-width: 48em) {
+  .Picker {
+    padding-bottom: var(--spacing-6);
+  }
 }
 
 .Picker__hidden {

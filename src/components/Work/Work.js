@@ -1,27 +1,19 @@
 import React from 'react'
-import { useSpring, animated } from 'react-spring'
 import './Work.css'
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-
-const Work = (props) => {
-  const [values, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
-
-  return (
-    <section id="cardWrapper">
-      <animated.div
-        className="card"
-        onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-        onMouseLeave={() => set({ xys: [0, 0, 1] })}
-        style={{ transform: values.xys.interpolate(trans) }}
-      >
-        <h2 className="Work__title">{props.title}</h2>
-        <p className="Work__subTitle">{props.sub}</p>
-        <p className="Work__description">{props.description}</p>
-      </animated.div>
-    </section>
-  );
-}
+const Work = (props) => (
+  <section className="WorkWrapper">
+    <div className="Work">
+      <h2 className="Work__title">{props.title}</h2>
+      <p className="Work__subTitle">{props.sub}</p>
+      <h3 className="Work__toolsHeading">TOOLS: </h3>
+      <p className="Work__tools">{props.tools}</p>
+      <div className="Work__siteButton">
+        <img src={props.image} alt={props.alt} className="Work__image" />
+        <button className="Work__button">Visit Site</button>
+      </div>
+    </div>
+  </section>
+);
 
 export default Work;

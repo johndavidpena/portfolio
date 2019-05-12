@@ -1,93 +1,115 @@
-.Music {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: var(--color-purple);
-  z-index: 10;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+.MusicWrapper {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-.MusicBack {
-  color: var(--off-white);
-  position: absolute;
-  top: 1.5rem;
-  left: 0.75rem;
-  cursor: pointer;
-}
-
-.TrackWrapper {
+.Music {
+  position: relative;
   width: var(--sizing-5);
   height: var(--sizing-5);
+  background: hsl(0, 0%, 90%);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.5s;
+  border: 15px solid white;
+}
+@media only screen and (min-width: 36em) {
+  /*576px or more*/
+  .Music {
+    width: 24rem;
+    height: 24rem;
+  }
+}
+@media only screen and (min-width: 56.25em) {
+  /*900px or more*/
+  .Music {
+    width: 32rem;
+    height: 32rem;
+  }
+}
+@media only screen and (min-width: 68.75em) {
+  /*1100px or more*/
+  .Music {
+    width: 38rem;
+    height: 38rem;
+  }
+}
+@media only screen and (min-width: 87.5em) {
+  /*1400px or more*/
+  .Music {
+    width: 45rem;
+    height: 45rem;
+  }
 }
 
-.Track {
-  position: absolute;
-  width: var(--sizing-5);
-  height: var(--sizing-5);
-  cursor: pointer;
-  will-change: transform, opacity;
+#one {
+  background-image: url(https://res.cloudinary.com/mimas-music/image/upload/v1557612360/portfolio/finishImage.jpg);
+  background-size: cover;
+}
+#two {
+  background-image: url(https://res.cloudinary.com/mimas-music/image/upload/v1557612360/portfolio/righteousImage.jpg);
+  background-size: cover;
+}
+#three {
+  background-image: url(https://res.cloudinary.com/mimas-music/image/upload/v1557612360/portfolio/outcastImage.jpg);
   background-size: cover;
 }
 
-.FrontName {
-  color: var(--off-white);
-  font-family: inherit;
-  position: absolute;
-  top: 1.5rem;
-  left: 0.75rem;
-  z-index: 1;
+.Music__title {
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: var(--font-size-2);
+  color: var(--normal-text);
+  margin-bottom: var(--spacing-2);
+  margin-top: var(--spacing-2);
+  margin-left: var(--spacing-2);
+}
+@media only screen and (min-width: 36em) {
+  /*576px or more*/
+  .Music__title {
+  font-size: var(--font-size-1);
+  }
 }
 
-.FrontImage {
-  width: var(--sizing-5);
-}
-
-.BackTop {
-  width: var(--sizing-5);
-  height: var(--sizing-4);
-  display: flex;
-  background: var(--color-black);
-}
-
-.BackImage {
-  width: var(--sizing-4);
-  padding: var(--spacing-2);
-  border-radius: var(--border-radius-3);
-}
-
-.BackName {
-  color: var(--off-white);
+.Music__artist {
+  /* width: 100%; */
   font-size: var(--font-size-5);
+  font-weight: 400;
+  text-transform: lowercase;
+  padding-left: var(--spacing-2);
+  padding-right: var(--spacing-2);
+  padding-top: var(--spacing-1);
+  padding-bottom: var(--spacing-1);
+}
+@media only screen and (min-width: 36em) {
+  /*576px or more*/
+  .Music__artist {
+  font-size: var(--font-size-4);
+  }
 }
 
-.BackArtist {
-  color: var(--off-white);
-  font-size: var(--font-size-6);
-}
-
-.BackBottom {
-  width: var(--sizing-5);
-  height: var(--sizing-4);
-  background-color: var(--color-black);
-}
-
-.Controls {
-  display: flex;
-  justify-content: space-evenly;
+.Music__controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  height: 70%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+
+  background: linear-gradient(var(--color-red), var(--color-red-light));
+}
+
+.IconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .ControlIcons {
-  /* cursor: pointer; */
-}
-
-.volume {
-  text-align: center;
+  cursor: pointer;
 }
