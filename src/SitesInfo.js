@@ -28,7 +28,7 @@ const SitesInfo = [
     tools: 'React, Meteor, MongoDB',
     image: FeedinImage,
     alt: 'The Feedin Time homepage',
-    link: 'http://dharmanure.com'
+    link: 'http://radiancegrace.com'
   }
 ];
 
