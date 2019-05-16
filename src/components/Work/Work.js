@@ -9,21 +9,23 @@ const Work = props => (
       <h3 className="Work__toolsHeading">TOOLS: </h3>
       <p className="Work__tools">{props.tools}</p>
       <div className="Work__siteButton">
-        <img src={props.image} alt={props.alt} className="Work__image" />
-        <span className="AnchorBtn">
-          <a href={props.link}>
-            <button
-            // onClick={this.toggle}
-            // ref={ref => this.toggleBtn = ref}
-            >
-              <span className="AnchorBtn__right">&#8603;</span>&nbsp;
-              Visit Site
-            </button>
-          </a>
-        </span>
+        <a href={props.link}>
+          <img src={props.image} alt={props.alt} className="Work__image" />
+        </a>
       </div>
     </div>
   </section>
 );
 
 export default Work;
+
+{/* <div className="Work__siteButton">
+  <img src={props.image} alt={props.alt} className="Work__image" />
+  <span className="AnchorBtn">
+    <a href={props.link}>
+      <button>
+        <span className="AnchorBtn__right">&#8603;</span>&nbsp;
+        Visit Site
+      </button>
+  </a>
+</span> */}

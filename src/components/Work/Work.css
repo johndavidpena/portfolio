@@ -105,17 +105,29 @@
 
 .Work__siteButton {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 2fr 1fr; */
   align-items: center;
+
+  position: relative;
 }
 
 .Work__image {
   width: 100%;
   padding: 0.5rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in;
+}
+
+.Work__image:hover {
+  opacity: 1;
 }
 
 .AnchorBtn {
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .AnchorBtn button {
