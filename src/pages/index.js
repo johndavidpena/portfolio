@@ -7,6 +7,7 @@ import Work from '../components/Work/Work'
 import Sites from '../SitesInfo'
 import Music from '../components/Music/Music'
 import Tracks from '../TracksInfo'
+import Form from '../components/Form/form'
 import finishLine from '../mp3s/finishLine.mp3'
 import righteous from '../mp3s/righteous.mp3'
 import outcast from '../mp3s/outcast.mp3'
@@ -132,6 +133,8 @@ class IndexPage extends Component {
             {tracks}
             <audio ref={ref => this.player = ref} />
           </React.Fragment>}
+
+        <Form />
       </Layout>
     );
   }

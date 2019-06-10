@@ -18,14 +18,3 @@ const Work = props => (
 );
 
 export default Work;
-
-{/* <div className="Work__siteButton">
-  <img src={props.image} alt={props.alt} className="Work__image" />
-  <span className="AnchorBtn">
-    <a href={props.link}>
-      <button>
-        <span className="AnchorBtn__right">&#8603;</span>&nbsp;
-        Visit Site
-      </button>
-  </a>
-</span> */}
