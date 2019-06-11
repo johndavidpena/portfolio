@@ -7,6 +7,7 @@ const Form = () => (
     <p className={formStyles.text}>Want to get in touch?</p>
 
     <form name="contact" method="POST" data-netlify="true" className={formStyles.form}>
+      <input type="hidden" name="form-name" value="contact" />
       <div className={formStyles.nameEmail}>
         <div className={formStyles.input}>
           <label>Name
