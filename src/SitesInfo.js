@@ -10,7 +10,7 @@ const SitesInfo = [
     tools: 'HTML, CSS, javascript',
     image: CafeImage,
     alt: 'The cafe racer homepage',
-    link: 'https://nifty-ardinghelli-40a454.netlify.com/'
+    link: 'https://caferacer.netlify.com'
   },
   {
     id: 2,
