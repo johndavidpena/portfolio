@@ -1,12 +1,12 @@
 import CafeImage from './images/cafeImage.jpg'
-import MimasImage from './images/mimasImage.jpg'
-import FeedinImage from './images/feedinImage.jpg'
+import FeedinImage from './images/feedinImage.png'
+// import MimasImage from './images/mimasImage.jpg'
 
 const SitesInfo = [
   {
     id: 1,
     title: 'Cafe Racer',
-    sub: 'Modern Commerce',
+    sub: 'Modern Commerce Design',
     tools: 'HTML, CSS, javascript',
     image: CafeImage,
     alt: 'The cafe racer homepage',
@@ -14,21 +14,12 @@ const SitesInfo = [
   },
   {
     id: 2,
-    title: 'Mimas Music',
-    sub: 'Interactive Music Education',
-    tools: 'Node, Express, MongoDB',
-    image: MimasImage,
-    alt: 'The Mimas Music homepage',
-    link: 'http://mimasmusic.com'
-  },
-  {
-    id: 3,
     title: "Feedin' Time",
     sub: 'Mobile Web App',
-    tools: 'React, Meteor, MongoDB',
+    tools: 'React and Firebase',
     image: FeedinImage,
     alt: 'The Feedin Time homepage',
-    link: 'http://radiancegrace.com'
+    link: 'https://feedintime.netlify.com/'
   }
 ];
 
